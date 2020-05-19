@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ConstraintLayoutDemo</string>
+
+    <string name="title_demo01">相对定位</string>
+    <string name="title_demo02">外边距</string>
+    <string name="title_demo03">尺寸约束</string>
+    <string name="title_demo04">链</string>
+    <string name="title_demo05">辅助工具</string>
 </resources>
