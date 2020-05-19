@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Demo03Activity">
 
-    <!--  示例01：设置子控件的宽度为0dp，等于满足约束条件的大小  -->
+    <!--  示例01：设置子控件的宽度为0dp，等于满足约束关系的大小  -->
     <TextView
         android:id="@+id/tv_01"
         android:layout_width="0dp"
