@@ -6,4 +6,120 @@
     android:layout_height="match_parent"
     tools:context=".Demo05Activity">
 
+    <!--  示例01：按固定距离定位引导线的位置  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_01"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <TextView
+        android:id="@+id/tv_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:background="@color/colorPrimary"
+        android:text="TextView01"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/gl_01" />
+
+    <!--  示例02：按百分比定位引导线的位置  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_02"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <TextView
+        android:id="@+id/tv_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:background="@color/colorPrimary"
+        android:text="TextView02"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/gl_02" />
+
+    <!--  示例03：屏障  -->
+    <TextView
+        android:id="@+id/tv_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:background="@color/colorPrimary"
+        android:text="TextView03的文案"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:text="TextView04的文案文案"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_03"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/br_01"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="tv_03,tv_04" />
+
+    <TextView
+        android:id="@+id/tv_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="TextView05"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/br_01" />
+
+    <!--  示例04：组  -->
+    <TextView
+        android:id="@+id/tv_06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:background="@color/colorPrimary"
+        android:text="TextView06"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="TextView07"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/tv_06"
+        app:layout_constraintLeft_toRightOf="@id/tv_06" />
+
+    <TextView
+        android:id="@+id/tv_08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="TextView08"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/tv_07"
+        app:layout_constraintLeft_toRightOf="@id/tv_07" />
+
+    <androidx.constraintlayout.widget.Group
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_06,tv_07,tv_08" />
 </androidx.constraintlayout.widget.ConstraintLayout>

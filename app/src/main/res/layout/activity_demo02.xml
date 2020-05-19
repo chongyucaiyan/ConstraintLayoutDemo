@@ -6,4 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".Demo02Activity">
 
+    <!--  示例01：设置子控件的外边距  -->
+    <TextView
+        android:id="@+id/tv_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="32dp"
+        android:padding="16dp"
+        android:background="@color/colorPrimary"
+        android:text="TextView01"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="16dp"
+        android:padding="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="TextView02"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_01" />
+
+    <!--  示例02：设置有约束关系的兄弟控件gone时的外边距  -->
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="32dp"
+        android:padding="16dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="TextView03"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="16dp"
+        android:padding="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="TextView04"
+        android:textSize="24sp"
+        app:layout_goneMarginLeft="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_03" />
 </androidx.constraintlayout.widget.ConstraintLayout>

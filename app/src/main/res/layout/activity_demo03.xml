@@ -6,4 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".Demo03Activity">
 
+    <!--  示例01：设置子控件的宽度为0dp，等于满足约束条件的大小  -->
+    <TextView
+        android:id="@+id/tv_01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="TextView01"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--  示例02：设置宽高比  -->
+    <TextView
+        android:id="@+id/tv_02"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="120dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="TextView02"
+        android:textSize="24sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/tv_01"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--  示例03：设置高宽比  -->
+    <TextView
+        android:id="@+id/tv_03"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="120dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="TextView03"
+        android:textSize="24sp"
+        app:layout_constraintDimensionRatio="h,1:2"
+        app:layout_constraintTop_toBottomOf="@id/tv_02"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

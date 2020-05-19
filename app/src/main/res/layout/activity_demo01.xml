@@ -6,4 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".Demo01Activity">
 
+    <!--  示例01：与父容器建立约束关系  -->
+    <TextView
+        android:id="@+id/tv_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="TextView01"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <!--  示例02：与兄弟控件建立约束关系  -->
+    <TextView
+        android:id="@+id/tv_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="TextView02"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_01"
+        app:layout_constraintLeft_toRightOf="@id/tv_01" />
+
+    <!--  示例03：控制子控件居中显示  -->
+    <TextView
+        android:id="@+id/tv_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="TextView03"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--  示例04：控制子控件的文本基线相对齐  -->
+    <TextView
+        android:id="@+id/tv_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="TextView04"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="TextView05"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_04"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_04" />
 </androidx.constraintlayout.widget.ConstraintLayout>
